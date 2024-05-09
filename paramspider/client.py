@@ -53,7 +53,7 @@ def fetch_url_content(url,proxy):
         }
 
         try:
-            response = requests.get(url, proxies=proxy,headers=headers)
+            response = requests.get(url, proxies=proxy,headers=headers,verify=False)
             response.raise_for_status()
             return response
         except (requests.exceptions.RequestException, ValueError):
