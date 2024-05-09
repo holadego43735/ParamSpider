@@ -5,6 +5,9 @@ import logging
 import time
 import sys
 
+from urllib3.exceptions import InsecureRequestWarning
+
+requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
 
 logging.basicConfig(level=logging.INFO)
